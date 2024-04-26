@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Classes.css">
+</head>
+<body>
+    
+    <div id="backg">
+        <h1>About Classes</h1>
+   </div>
+
+
+   <div id="navigation" class="mainbody removea" style="padding: 20px;">
+       <ul>
+           <li><a href="nav_footer.html"><b>Home</b></a></li>
+           <li>/</li>
+           <li><a href="">Training Schedule and Location</a></li>
+       </ul>
+   </div>
+   <section  class="mainbody">
+    <h1 style="font-size: 50px;">Training Schedule and Location</h1>
+   <div>
+   <h2>Club Address</h2>
+   <address> MAC ,ENERGY ACRES, UPES, BIDHOLI, via, Prem Nagar
+    </address>
+     <address> Uttarakhand 248007</address>
+</div>
+
+<div>
+   <h2>Map and Directions</h2>
+   <div id="history">
+   <div>
+   <p>The University of Petroleum and Energy Studies (UPES) in Bhidholi, Uttarakhand, India, welcomes students from all over. Here's a detailed guide on navigating your way to the campus:</p>
+   </div>
+   <div id="googleMap" style="width: 500px; height: 200px;">
+   </div>
+</div>
+
+<div>
+    <h2>Time table</h2>
+    <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th colspan="2">Morining</th>
+            <th colspan="6">Evening</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td colspan="2">Judo-Elite
+                10am
+                (**As required
+                for Elite Seniors)</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>JUDO-snr
+                beginners/
+                Kyu Grades
+                8.00-9.30pm
+                 (turning 15yrs+
+                in the year)</td>
+
+            </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td colspan="2">Judo-Elite
+                10am
+                (**As required
+                for Elite Seniors)</td>
+            <td ></td>
+            <td></td>
+            <td ></td>
+            <td></td>
+            <td>JUDO-jnr
+                6.00-7.30pm
+                Juniors
+                Turning 9-14yrs
+                in the year
+                </td>
+            <td>JUDO-snr
+                7.30-9.00pm
+                Graded Seniors  
+                (turning 15yrs+
+                in the year)</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Wednasday</td>
+            <td colspan="2" class="adbmslab">Judo-Elite
+                10am
+                (**As required
+                for Elite Seniors)</td>
+            <td>  JUDO-kids
+                4-5yo Pre-School
+                5.15-6.00pm
+                Dino Kids</td>
+            <td class="flat">JUDO-kids u/9
+                6.00-7.30pm
+                (turning 5-8yrs
+                in the year)</td>
+            <td></td>
+            <td class="ai"></td>
+            <td class="hci"></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Thusday</td>
+            <td colspan="2">Judo-Elite
+                10am
+                (**As required
+                for Elite Seniors)</td>
+            <td class="s_w"></td>
+            <td></td>
+            <td class="flat"></td>
+            <td></td>
+            <td class="adbms">JUDO-jnr
+                (6.00-7.30pm
+                Juniors
+                Turning 9-14yrs
+                in the year)</td>
+            <td>JUDO-snr
+                7.30-9.00pm
+                Graded Seniors  
+                (turning 15yrs+
+                in the year)</td>
+            <td class="hci"></td>
+          </tr>
+
+          <tr>
+            <td>Friday</td>
+            <td colspan="2">Judo-Elite
+                10am
+                (**As required
+                for Elite Seniors)</td>
+            <td></td>
+            <td class="flat"></td>
+            <td></td>
+            <td colspan="2" class="webtechlab"></td>
+            <td></td>
+            <td class="hci"></td>
+          </tr>
+
+          <tr>
+            <td>Saturday</td>
+            <td colspan="2" class="s_wlab"></td>
+            <td class="adbms"></td>
+            <td>JUDO-jnr
+                (2.30-3.30pm
+                Competition-level Juniors
+                turning 9-14 years)</td>
+            <td class="webtech"></td>
+            <td class="ai"></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          </tbody>
+      </table>
+      
+</div>
+
+
+</section>
+
+</div>
+
+<script>
+    function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+body{
+    margin: 0;
+    font-family: "Source Sans Pro Paris2024", "Olympic Sans", Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+#message {
+  font-family: 'Merienda';
+  font-weight: 10000;
+  font-size: 50px;
+}
+
+
+#logo{
+    display: flex;
+    justify-content:space-evenly;
+    background-color:  royalblue;
+
+}
+  
+
+#main_inner
+{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+header{
+
+    padding: 6%;
+
+}
+
+#sideline{
+    padding: 6%;
+}
+
+.list li{
+    list-style: none;
+
+}
+
+
+#question{
+  background-color: gray;
+  margin: 2px;
+  padding: 5px;
+
+}
+
+#box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#answers{
+  display: none;
+  margin: 2px;
+  padding: 2px;
+  background-color:  #978A84;
+}
+
+#question:hover  #answers{
+  display: block;
+}
+
+@media only screen and (max-width: 920px) {
+  #logo{
+    display: block;
+  }
+  .logoimg img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  #main_inner{
+    display: block;
+  }
+  .color_mode{
+    position: fixed;
+    top: 20%;
+    left: 100rem;
+  }
+  #message{
+    text-align: center;
+  }
+  
+}
+
+
+.dark{
+  background-color:#212121;
+  color: whitesmoke;
+}
+
+.color_mode{
+  position: fixed;
+  top: 20%;
+  left: 89rem;
+}

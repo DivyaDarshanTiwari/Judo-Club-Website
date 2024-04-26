@@ -1,0 +1,87 @@
+body{
+    margin: 0px;
+    background-color: royalblue;
+    font: 16px / 24px Arial, sans-serif;
+}
+
+nav {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: #ddd;
+  }
+
+#backg{
+    background-image: url('https://www.britishjudo.org.uk/wp-content/uploads/2018/02/28161937_10155998305214277_466460199566263291_o-1030x686.jpg');
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    object-fit:contain;
+    text-align: center;
+}
+
+#backg h1{
+    padding-top: 4%;
+    font-size: 100px;
+    color: aliceblue;
+    margin: 0px;
+}
+
+.mainbody{
+    margin: 50px 200PX; 
+    background-color: white;
+     border-radius: .25rem;
+     padding:10px  30px;
+}
+
+#navigation{
+    background-color: white;
+}
+#navigation li {
+    list-style: none;
+    display: inline-block;
+}
+
+.removea ul li a{
+    text-decoration: none; 
+    color: black;
+}
+
+/* #history{
+    display: ;
+    align-items: center;
+} */
+
+#history div{
+    display: inline-block;
+}
+
+table, tr, td,th{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+

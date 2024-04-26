@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judoka Club</title>
+    <link rel="stylesheet" href="FrontPage.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body>
+
+    <div id="main" style="height: 100%; width: 100%;">
+        <section id="logo">
+                <!-- here is the line where the sentence is been displayed -->
+                <div id="m">
+                  <h1 id="message"></h1> 
+                </div>
+        <div  class="logoimg" >
+            <img src="JodoLOGO.png" alt="Logo">
+        </div>
+
+        <div class="logoimg">
+            <img src="judoUniform.png" alt="dess">
+        </div>
+      </section>
+
+      <section id="main_inner">
+
+        <header>
+            <div>
+                <p>Judo, literally translated as "the gentle way," might seem like an oxymoron at first glance. After all, the sport is known for its spectacular throws and pins. But beneath the throws and groundwork lies a philosophy that emphasizes  efficiency, self-improvement, and respect. Judo isn't just about overpowering your opponent; it's about using their own strength against them, minimizing your effort while maximizing your effectiveness.</p>
+                <p> Dr Jigoro Kano is credited for founding the discipline in Tokyo after opening his first dojo (school), the kōdōkan, in 1882. In Japanese, the word “judo” means “the gentle way,” but the traditional wrestling sport can hardly be described as such—it requires considerable physical effort. Dr. Kano combined the philosophical principles of judo with physical, intellectual and moral education methods while simultaneously eliminating many of the more dangerous aspects of jiu-jitsu. Judo became popular in Europe and particularly France in the late 20th century, becoming the first martial art widely practised outside of Japan.</p>
+            </div>
+
+            <div>
+                <h1>A Thrill for All:</h1>
+                <p>Judo welcomes practitioners of all ages and fitness levels. Whether you're seeking a challenging workout, self-defense skills, or a supportive community, Judo has something to offer.</p>
+              
+                <h2>Benefits of Judo:</h2>
+              
+                <section>
+                  <h3>Fitness Focused:</h3>
+                  <p>Judo builds strength, coordination, and flexibility. Throws and takedowns engage your entire body, while grappling hones your balance and core strength.</p>
+                </section>
+              
+                <section>
+                  <h3>Mental Edge:</h3>
+                  <p>Judo cultivates discipline and focus. Learning throws and grappling techniques requires concentration and perseverance. The practice also promotes mental toughness and strategic thinking.</p>
+                </section>
+              
+                <section>
+                  <h3>Self-Defense Skills:</h3>
+                  <p>Judo empowers you with effective self-defense techniques. You'll learn throws and pins to gain control of an attacker and use their own force against them.</p>
+                </section>
+              
+                <section>
+                  <h3>Building Confidence:</h3>
+                  <p>As you master throws and grappling techniques, your confidence soars. Judo fosters a sense of accomplishment and self-belief that spills over into all areas of life.</p>
+                </section>
+            </div>
+        </header>
+
+        <div id="sideline">
+
+            <section style="width: 400px;">
+                <h1>In Association With</h1>
+                <hr>
+                <div >
+                    <img src="UPESlogo.png" alt="upes logo" style="object-fit: cover; height: 50%; width: 50%;">
+                    <br>
+                    University of Pertroleum And Energy studies
+                </div>
+            </section>
+
+            <section>
+                <h1>Related Content</h1>
+                <hr>
+                     <section class="background-video">
+                      <iframe src="https://www.youtube.com/embed/StpHBbFfgg4" frameborder="0"></iframe>
+                     </section>
+            </section>
+
+        </div>
+
+      </section>
+      <div ng-app="myApp" ng-controller="namesCtrl" id="box">
+        <div>
+        <label for="">Questions:</label>
+        <input type="text" ng-model="test" style="width: 50%;" placeholder="Is judo a Martial Arts ?">
+        <div ng-repeat="x in names | filter:test" id="question">
+          {{ x.question }}
+          <div id="answers">
+            {{x.response}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="color_mode" onclick="dark()" >Dark Mode</button>
+
+  </div>
+
+  <script>
+
+const message = "Welcome to the Martial Arts world!";
+const messageElement = document.getElementById("message");
+const words = message.split(" "); 
+let currentWordIndex = 0;
+let currentLetterIndex = 0;
+
+function displayWordByWord() 
+{
+  if (currentWordIndex < words.length) 
+  {
+    const currentWord = words[currentWordIndex];
+    if (currentLetterIndex < currentWord.length) 
+    {
+      messageElement.innerHTML += currentWord[currentLetterIndex];
+      currentLetterIndex++;
+      setTimeout(displayWordByWord, 100); // Adjust the delay (in milliseconds) between letters
+    } 
+    else 
+    {
+      messageElement.innerHTML += "<br>" ; // Add a space after each word
+      currentLetterIndex = 0;
+      currentWordIndex++;
+      setTimeout(displayWordByWord, 300); // Adjust the delay (in milliseconds) between words
+    }
+  }
+}
+
+
+function dark(){
+  var color = document.body;
+  color.classList.toggle("dark");
+  const toggleBtn = document.querySelector(".color_mode");
+  const answer = document.getElementById("answer")
+  answer.style.color = color.classList.contains("dark")? "black" : "grey";
+  toggleBtn.textContent = color.classList.contains("dark") ? "Light Mode" : "Dark Mode";
+}
+
+displayWordByWord();
+     
+      let x = angular.module('myApp', []);
+x.controller('namesCtrl', function($scope) {
+
+    $scope.names = [
+      {question: ' Is judo suitable for beginners, or do I need prior experience in martial arts?' ,
+    response:'Absolutely, judo is welcoming to beginners of all levels. Our club offers tailored instruction starting from the basics, so you will feel comfortable and confident on the mats in no time.'},
+    {question:'What kind of physical fitness level is required to participate in judo?',
+  response:' Judo is a fantastic way to improve your fitness, regardless of your current level. While it does require physical exertion, our training sessions are designed to accommodate various fitness levels, gradually building strength, flexibility, and endurance as you progress.'},
+  {
+    question:'Are there opportunities for competition, or is the club more focused on recreational practice?',
+    response:'We cater to both competitive and recreational judo practitioners. Whether you are interested in testing your skills in tournaments or simply enjoying the art and discipline of judo, we provide avenues for both paths within our club.'
+  },
+  {
+    question:'What equipment or attire do I need to participate in judo sessions?',
+    response:' For your first few sessions, comfortable workout attire like a t-shirt and sweatpants will suffice. Once you are committed, you wll need to invest in a judogi (judo uniform), which you can usually purchase through the club or online. We wll guide you through the process.'
+  },
+  {
+    question:' How often are training sessions held, and what is the time commitment expected?',
+    response:'Training sessions typically occur several times a week, allowing for flexibility in scheduling to accommodate different commitments. We encourage consistent attendance to maximize your progress, but understand that everyone has other obligations outside of judo. We are here to support your journey, whether you can make it to every session or not.'
+  }
+    ];
+
+
+});
+
+  </script>
+
+
+      
+</body>
+</html>
